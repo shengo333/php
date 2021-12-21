@@ -1,14 +1,26 @@
 <?php  
 
-define('NAME', 'Yoshi');
+    $stringOne = 'my imeil is: ';
+    $stringTwo = 'bekashengelia333@gmail.com';
 
-//$name = 'Yoshi';
-$age = 30;
+   // echo $stringOne.$stringTwo;
 
- //echo NAME;
+    $name = 'mario';
 
-//$name = 'Jimbo';
+    //echo 'Hey my name is ' . $name;
+    //echo "Hey my name is $name";
 
+    // echo "the ninja screamed 'whaaaaaaaaaa' ";
+    // echo 'the ninja screamed "whaaaaaaaaaa" ';
+    // echo "the ninja screamed \"whaaaaaaaaaa\" ";
+
+    //echo $name[0];
+
+    //echo strlen($name);
+
+    // echo strtoupper($name);
+    // echo strtolower($name);
+    echo str_replace('m','d', $name )
 
 ?>
 
@@ -19,10 +31,6 @@ $age = 30;
 </head>
 <body>
     
-    <h1>User profile page</h1>
-    <h2><?php  echo NAME;?> </h2>
-    <h2><?php  echo $age;?> </h2>
-
 
 </body>
 </html>

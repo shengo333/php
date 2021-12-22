@@ -1,36 +1,23 @@
 <?php  
 
-$price = 45;
+//functions
 
-// if ($price < 30){
-//     echo 'condition is met';
-// } elseif($price < 50){ 
-//     echo 'else if condition';
-// } else {
-//     echo 'condition is not met';
-// }
 
-     $products = [
-         ['name' => 'shiny star', 'price' => 20],
-         ['name' => 'green shell', 'price' => 10],
-         ['name' => 'red shell', 'price' => 15],
-         ['name' => 'gold coin', 'price' => 5],
-         ['name' => 'lightning bolt', 'price' => 40],
-         ['name' => 'banana skin', 'price' => 2],
-     ];
-
-    foreach($products as $product){
-        
-         if($product['name'] === 'lightning bolt'){
-                break;
-         }
-
-         if($product ['price'] > 15){
-             continue;
-         }
-            echo $product['name'] . '<br />';
+    function sayHello($name='irakli', $time = 'morning'){
+        echo "$name goood $time";
     }
 
+    sayHello('shengo', 'evening');
+
+
+    function formatProduct($product){
+        // echo "{$product['name']} costs $ {$product['price']}";
+        return "{$product['name']} costs $ {$product['price']}";
+    }
+
+    $formatted = formatProduct(['name'=> 'goldstar', 'price' => '20']);
+
+    //echo "{$formatted} this is formated"
 
 ?>
 

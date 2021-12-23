@@ -17,14 +17,20 @@ if(isset($_POST['submit'])){
     if(empty($_POST['title'])){
         echo 'title is required <br/>' ;
     } else {
-        echo htmlspecialchars($_POST['title']);
+        $title= $_POST['title'];
+        if(!preg_match('/^[a-zA-Z\s]+$/', $title)){
+            echo 'title must be only latters and space ';
+        }
     }
 
     // check ingridients
     if(empty($_POST['ingredients'])){
         echo 'ingredients are required <br/>' ;
     } else {
-        echo htmlspecialchars($_POST['ingredients']);
+        $ingredients= $_POST['ingredients'];
+        if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)){
+        echo 'ingredients must be a comma separated list ';
+        }
     }
 }   //end of post check
 

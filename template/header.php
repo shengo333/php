@@ -10,7 +10,7 @@
         session_unset();
     }
 
-    $name = $_SESSION['name'];
+    $name = $_SESSION['name'] ?? 'Guest';
 
 
 ?>
